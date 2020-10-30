@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/jean-yves/Bureau/SFND_Lidar_Obstacle_Detection/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f1d6a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f1d6a.dir/build.make CMakeFiles/cmTC_f1d6a.dir/build
+make[1] : on entre dans le répertoire « /home/jean-yves/Bureau/SFND_Lidar_Obstacle_Detection/src/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_f1d6a.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_f1d6a.dir/CheckSymbolExists.c.o   -c /home/jean-yves/Bureau/SFND_Lidar_Obstacle_Detection/src/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f1d6a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1d6a.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_f1d6a.dir/CheckSymbolExists.c.o  -o cmTC_f1d6a 
+CMakeFiles/cmTC_f1d6a.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+CheckSymbolExists.c:(.text+0x1b) : référence indéfinie vers « pthread_create »
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f1d6a.dir/build.make:97: recipe for target 'cmTC_f1d6a' failed
+make[1]: *** [cmTC_f1d6a] Error 1
+make[1] : on quitte le répertoire « /home/jean-yves/Bureau/SFND_Lidar_Obstacle_Detection/src/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_f1d6a/fast' failed
+make: *** [cmTC_f1d6a/fast] Error 2
+
+File /home/jean-yves/Bureau/SFND_Lidar_Obstacle_Detection/src/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/jean-yves/Bureau/SFND_Lidar_Obstacle_Detection/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3f90e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3f90e.dir/build.make CMakeFiles/cmTC_3f90e.dir/build
+make[1] : on entre dans le répertoire « /home/jean-yves/Bureau/SFND_Lidar_Obstacle_Detection/src/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_3f90e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3f90e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3f90e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f90e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_3f90e.dir/CheckFunctionExists.c.o  -o cmTC_3f90e -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3f90e.dir/build.make:97: recipe for target 'cmTC_3f90e' failed
+make[1]: *** [cmTC_3f90e] Error 1
+make[1] : on quitte le répertoire « /home/jean-yves/Bureau/SFND_Lidar_Obstacle_Detection/src/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_3f90e/fast' failed
+make: *** [cmTC_3f90e/fast] Error 2
+
+
